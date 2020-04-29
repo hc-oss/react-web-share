@@ -1,7 +1,7 @@
 {
   "name": "react-web-share",
   "author": "Harsh Zalavadiya",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": "harshzalavadiya/react-web-share",
   "module": "dist/react-web-share.esm.js",

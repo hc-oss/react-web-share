@@ -17,10 +17,14 @@ export const RWebShare = ({ children, data, sites = Object.keys(iconList) }: RWe
   };
 
   const handleOnClick = () => {
-    if ((window as any).navigator.share) {
-      (window as any).navigator.share(shareData);
-    } else {
-      onOpen();
+    try {
+      if ((window as any).navigator.share) {
+        (window as any).navigator.share(shareData);
+      } else {
+        onOpen();
+      }
+    } catch (e) {
+      console.error(e);
     }
   };
 
