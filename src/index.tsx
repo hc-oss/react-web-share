@@ -18,7 +18,7 @@ export const RWebShare = ({ children, data, sites = Object.keys(iconList) }: RWe
 
   const handleOnClick = () => {
     if ((window as any).navigator.share) {
-      (window as any).navigator.share(shareData);
+      (window as any).navigator.share(shareData).catch(console.error);
     } else {
       onOpen();
     }

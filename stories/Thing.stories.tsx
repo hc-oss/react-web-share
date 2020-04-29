@@ -13,7 +13,7 @@ export const Default = () => (
       data={{
         text: "Like humans, flamingos make friends for life",
         url: "https://bit.ly/2UWTnlL",
-        title: "Share this article on Flamingos",
+        title: "Flamingos",
       }}
     >
       <button>Share 🔗</button>

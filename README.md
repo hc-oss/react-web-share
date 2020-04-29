@@ -13,6 +13,7 @@ Tiny [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/
 ## ✨ Features
 
 - 🍃 Only ~3kb gzipped and no external dependencies
+- 🌀 Uses React Portal
 - ✌ Written w/ TypeScript
 
 ## 🔧 Installation
@@ -45,7 +46,7 @@ const Example = () => {
         data={{
           text: "Like humans, flamingos make friends for life",
           url: "https://bit.ly/2UWTnlL",
-          title: "Share this article on Flamingos",
+          title: "Flamingos",
         }}
       >
         <button>Share 🔗</button>
