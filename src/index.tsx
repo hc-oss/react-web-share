@@ -12,7 +12,7 @@ export const RWebShare = ({ children, data, sites = Object.keys(iconList) }: RWe
   const shareData = {
     title: "share",
     text: "",
-    url: window.location.href,
+    url: typeof window !== `undefined` ? window.location.href : undefined,
     ...data,
   };
 
