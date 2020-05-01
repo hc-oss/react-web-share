@@ -18,7 +18,7 @@ export default function Icon({ name, data, onClose }: IconProps) {
   const { path, viewBox = "0 0 24 24", color, e } = iconList[name];
   return (
     <button
-      onClick={() => e(data.url, data.text) && onClose()}
+      onClick={() => e(data.url, data.text, data.title) && onClose()}
       aria-label={name}
       style={{ ...SocialIconStyle, background: color }}
     >

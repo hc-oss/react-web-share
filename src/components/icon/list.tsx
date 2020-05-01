@@ -40,6 +40,16 @@ const iconList: IconListType = {
     color: "#0088CC",
     e: (l, t) => window.open(`https://telegram.me/share/msg?url=${l}&text=${t}`),
   },
+  linkedin: {
+    path: (
+      <path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z" />
+    ),
+    color: "#0073b1",
+    e: (l, t, ti) =>
+      window.open(
+        `https://www.linkedin.com/shareArticle?mini=true&url=${l}&title=${ti}&summary=${t}`
+      ),
+  },
   mail: {
     path: (
       <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
