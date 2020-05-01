@@ -12,7 +12,7 @@ export const Default = () => (
     <RWebShare
       data={{
         text: "Like humans, flamingos make friends for life",
-        url: "https://bit.ly/2UWTnlL",
+        url: "https://on.natgeo.com/2zHaNup",
         title: "Flamingos",
       }}
     >
