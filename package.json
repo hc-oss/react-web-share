@@ -1,7 +1,7 @@
 {
   "name": "react-web-share",
   "author": "Harsh Zalavadiya",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "repository": "harshzalavadiya/react-web-share",
   "module": "dist/react-web-share.esm.js",
@@ -11,9 +11,6 @@
     "dist",
     "src"
   ],
-  "engines": {
-    "node": ">=12"
-  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build && filesize",
