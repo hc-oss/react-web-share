@@ -8,7 +8,7 @@ Tiny [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/
 
 [![Edit react-web-share](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-web-share-46skt?fontsize=14&hidenavigation=1&theme=dark)
 
-> 💡 most browsers will restrict web share api only to https websites
+> 💡 most browsers restricts web share api only to https websites
 
 ## ✨ Features
 
@@ -60,10 +60,21 @@ export default Example;
 
 ## 👀 Props
 
-| Prop      | Description  | Type                 | Default                                       |
-| --------- | ------------ | -------------------- | --------------------------------------------- |
-| `data`    | Share Object | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
-| `options` | sites        | `string[]`           | all available social sites                    |
+| Prop    | Description  | Type                 | Default                                       |
+| ------- | ------------ | -------------------- | --------------------------------------------- |
+| `data`  | Share Object | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
+| `sites` | sites        | `string[]`           | all platforms (see list below for key list)   |
+
+## 🌎 Sites
+
+- facebook
+- twitter
+- whatsapp
+- reddit
+- telegram
+- linkedin
+- mail
+- copy (Copy to Clipboard)
 
 ## 🤠 Credits
 
