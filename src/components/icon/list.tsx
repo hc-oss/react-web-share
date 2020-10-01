@@ -10,7 +10,7 @@ const iconList: IconListType = {
       <path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" />
     ),
     color: "#0076FB",
-    e: (l) => window.open(`https://www.facebook.com/sharer/sharer.php?u=${l}`),
+    e: l => window.open(`https://www.facebook.com/sharer/sharer.php?u=${l}`),
   },
   twitter: {
     path: (
@@ -62,7 +62,7 @@ const iconList: IconListType = {
       <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path>
     ),
     color: "#718096",
-    e: (l) => navigator.clipboard.writeText(l),
+    e: l => navigator.clipboard.writeText(l),
   },
 };
 
