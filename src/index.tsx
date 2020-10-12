@@ -1,5 +1,5 @@
 import { RWebShareProps } from "interfaces";
-import React, { cloneElement } from "react";
+import React, { cloneElement, useMemo } from "react";
 
 import Backdrop from "./components/backdrop";
 import iconList from "./components/icon/list";
@@ -9,17 +9,22 @@ import useDisclosure from "./hooks/use-disclosure";
 
 export const RWebShare = ({ children, data, sites = Object.keys(iconList) }: RWebShareProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
-  const shareData = {
-    title: "share",
-    text: "",
-    url: typeof window !== `undefined` ? window.location.href : undefined,
-    ...data,
-  };
+
+  const shareData = useMemo(
+    () => ({
+      ...data,
+      title: data.title || "share",
+      text: data.text || "",
+      url: encodeURIComponent(data.url || window?.location?.href || ""),
+    }),
+    [data]
+  );
 
   const handleOnClick = () => {
-    if ((window as any).navigator.share) {
-      (window as any).navigator.share(shareData).catch(console.error);
-    } else {
+    try {
+      window.navigator.share(shareData);
+    } catch (e) {
+      console.warn(e);
       onOpen();
     }
   };
