@@ -1,7 +1,7 @@
 {
   "name": "react-web-share",
   "author": "Harsh Zalavadiya",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "license": "MIT",
   "repository": "harshzalavadiya/react-web-share",
   "module": "dist/react-web-share.esm.js",
@@ -27,13 +27,13 @@
   "devDependencies": {
     "@ampproject/filesize": "^4.2.0",
     "@babel/core": "^7.11.6",
-    "@storybook/addon-essentials": "^6.0.22",
-    "@storybook/addon-knobs": "^6.0.22",
-    "@storybook/addon-links": "^6.0.22",
-    "@storybook/addon-storysource": "^6.0.22",
-    "@storybook/addons": "^6.0.22",
-    "@storybook/react": "^6.0.22",
-    "@types/react": "^16.9.49",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-knobs": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/addon-storysource": "^6.0.26",
+    "@storybook/addons": "^6.0.26",
+    "@storybook/react": "^6.0.26",
+    "@types/react": "^16.9.52",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
     "husky": "^4.3.0",
@@ -42,7 +42,7 @@
     "react-is": "^16.13.1",
     "ts-loader": "^8.0.4",
     "tsdx": "^0.14.0",
-    "tslib": "^2.0.1",
+    "tslib": "^2.0.3",
     "typescript": "^4.0.3"
   },
   "husky": {

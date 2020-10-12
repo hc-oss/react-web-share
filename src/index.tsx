@@ -15,7 +15,9 @@ export const RWebShare = ({ children, data, sites = Object.keys(iconList) }: RWe
       ...data,
       title: data.title || "share",
       text: data.text || "",
-      url: encodeURIComponent(data.url || window?.location?.href || ""),
+      url: encodeURIComponent(
+        data.url || (typeof window !== "undefined" && window.location.href) || ""
+      ),
     }),
     [data]
   );
