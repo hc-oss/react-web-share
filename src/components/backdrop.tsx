@@ -14,7 +14,7 @@ const BackdropContainerStyle: CSSProperties = {
   zIndex: 1400,
 };
 
-const inEffect = `.web-share-fade{animation-name:simpleFade;animation-duration:.2s;animation-fill-mode:both}@keyframes simpleFade{0%{opacity:0}100%{opacity:1}}.web-share-fade-in-up{animation-name:fadeInUp;animation-duration:.45s;animation-fill-mode:both}@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}`;
+const inEffect = `.web-share-fade{animation:simpleFade 0.5s;animation-fill-mode:both }@keyframes simpleFade{0%{opacity:0 }100%{opacity:1 }}.web-share-fade-in-up{animation:fadeInUp 0.5s;animation-fill-mode:both }@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px) }100%{opacity:1;transform:translateY(0) }}`;
 
 export default function Backdrop({ children, onClose }) {
   const handleOnClose = e => {

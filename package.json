@@ -1,12 +1,13 @@
 {
   "name": "react-web-share",
   "author": "Harsh Zalavadiya",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "repository": "harshzalavadiya/react-web-share",
   "module": "dist/react-web-share.esm.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "sideEffects": false,
   "files": [
     "dist",
     "src"
@@ -59,5 +60,16 @@
     "track": [
       "./dist/*.production.min.js"
     ]
-  }
+  },
+  "keywords": [
+    "react",
+    "share",
+    "web-share",
+    "native",
+    "fallback",
+    "polyfill",
+    "component",
+    "tiny",
+    "lightweight"
+  ]
 }
