@@ -22,7 +22,7 @@ const iconList: IconListType = {
       <path d="M24 4.6a10 10 0 01-2.9.7 5 5 0 002.2-2.7c-1 .6-2 1-3.1 1.2a5 5 0 00-8.4 4.5A14 14 0 011.6 3.2 4.8 4.8 0 001 5.6a5 5 0 002.2 4.1 4.9 4.9 0 01-2.3-.6A5 5 0 005 14a5 5 0 01-2.2 0 5 5 0 004.6 3.5 9.9 9.9 0 01-6.1 2.1H0a14 14 0 007.6 2.2c9 0 14-7.5 14-14V7A10 10 0 0024 4.6z" />
     ),
     color: "#1DA1F2",
-    e: (l, t) => window.open(`http://twitter.com/share?text=${t}&url=${l}`),
+    e: (l, t) => window.open(`http://twitter.com/intent/tweet?text=${t}&url=${l}`),
   },
   whatsapp: {
     path: (
