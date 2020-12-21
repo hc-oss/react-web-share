@@ -19,7 +19,7 @@ export default function Icon({ name, data, onClose }: IconProps) {
 
   return (
     <button
-      onClick={() => e(decodeURIComponent(data.url || ""), data.text, data.title) && onClose()}
+      onClick={() => e(encodeURIComponent(data.url || ""), data.text, data.title) && onClose()}
       aria-label={name}
       style={{ ...SocialIconStyle, background: color }}
     >
