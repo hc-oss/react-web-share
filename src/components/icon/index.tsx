@@ -19,11 +19,11 @@ export default function Icon({ name, data, onClose }: IconProps) {
 
   return (
     <button
-      onClick={() => e(data.url, data.text, data.title) && onClose()}
+      onClick={() => e(encodeURIComponent(data.url), data.text, data.title) && onClose()}
       aria-label={name}
       style={{ ...SocialIconStyle, background: color }}
     >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox={viewBox}>
+      <svg fill="white" viewBox={viewBox}>
         {path}
       </svg>
     </button>
