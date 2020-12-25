@@ -13,11 +13,11 @@ export interface RWebShareProps {
 export interface SocialIconsProps {
   onClose;
   sites: string[];
-  data: ShareData;
+  data: Required<ShareData>;
 }
 
 export interface IconProps {
   onClose;
   name: string;
-  data: ShareData;
+  data: Required<ShareData>;
 }
