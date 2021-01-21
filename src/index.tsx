@@ -7,7 +7,12 @@ import Portal from "./components/portal";
 import SocialIcons from "./components/social-icons";
 import useDisclosure from "./hooks/use-disclosure";
 
-export const RWebShare = ({ children, data, sites = Object.keys(iconList) }: RWebShareProps) => {
+export const RWebShare = ({
+  children,
+  closeText,
+  data,
+  sites = Object.keys(iconList),
+}: RWebShareProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
 
   const shareData = useMemo(
@@ -38,7 +43,7 @@ export const RWebShare = ({ children, data, sites = Object.keys(iconList) }: RWe
       {isOpen && (
         <Portal>
           <Backdrop onClose={onClose}>
-            <SocialIcons onClose={onClose} sites={sites} data={shareData} />
+            <SocialIcons onClose={onClose} sites={sites} data={shareData} closeText={closeText} />
           </Backdrop>
         </Portal>
       )}

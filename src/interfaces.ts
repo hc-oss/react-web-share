@@ -6,12 +6,14 @@ export interface ShareData {
 
 export interface RWebShareProps {
   children: any;
+  closeText?: string;
   data: ShareData;
   sites: string[];
 }
 
 export interface SocialIconsProps {
   onClose;
+  closeText?: string;
   sites: string[];
   data: Required<ShareData>;
 }

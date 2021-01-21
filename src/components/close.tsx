@@ -10,10 +10,15 @@ const CloseStyle: CSSProperties = {
   fontSize: "1rem",
 };
 
-export default function CloseButton({ onClose }) {
+interface CloseButtonProps {
+  onClose;
+  closeText?: string;
+}
+
+export default function CloseButton({ onClose, closeText }: CloseButtonProps) {
   return (
     <button style={CloseStyle} aria-label="Close" type="button" onClick={onClose}>
-      Close
+      {closeText || "Close"}
     </button>
   );
 }
