@@ -14,12 +14,18 @@ const SocialIconStyle: CSSProperties = {
   fontSize: 0,
 };
 
-export default function Icon({ name, data, onClose }: IconProps) {
+export default function Icon({ name, data, onClose, onClick }: IconProps) {
   const { path, viewBox = "0 0 24 24", color, e } = iconList[name];
+
+  const handleOnButtonClicked = () => {
+    onClick && onClick(); // callback
+    e(encodeURIComponent(data.url), data.text, data.title);
+    onClose();
+  };
 
   return (
     <button
-      onClick={() => e(encodeURIComponent(data.url), data.text, data.title) && onClose()}
+      onClick={handleOnButtonClicked}
       aria-label={name}
       style={{ ...SocialIconStyle, background: color }}
     >
