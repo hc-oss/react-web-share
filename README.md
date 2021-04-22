@@ -48,6 +48,7 @@ const Example = () => {
           url: "https://on.natgeo.com/2zHaNup",
           title: "Flamingos",
         }}
+        onClick={() => console.log("shared successfully!")}
       >
         <button>Share 🔗</button>
       </RWebShare>
@@ -60,10 +61,11 @@ export default Example;
 
 ## 👀 Props
 
-| Prop    | Description  | Type                 | Default                                       |
-| ------- | ------------ | -------------------- | --------------------------------------------- |
-| `data`  | Share Object | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
-| `sites` | sites        | `string[]`           | all platforms (see list below for key list)   |
+| Prop      | Description                 | Type                 | Default                                       |
+| --------- | --------------------------- | -------------------- | --------------------------------------------- |
+| `data`    | Share Object                | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
+| `sites`   | sites                       | `string[]`           | all platforms (see list below for key list)   |
+| `onClick` | callback on sucessful share |                      |                                               |
 
 ## 🌎 Sites
 

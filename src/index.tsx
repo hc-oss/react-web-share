@@ -11,6 +11,7 @@ export const RWebShare = ({
   children,
   closeText,
   data,
+  onClick,
   sites = Object.keys(iconList),
 }: RWebShareProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
@@ -25,11 +26,15 @@ export const RWebShare = ({
     [data]
   );
 
-  const handleOnClick = () => {
-    try {
-      window.navigator.share(shareData);
-    } catch (e) {
-      console.warn(e);
+  const handleOnClick = async () => {
+    if (window.navigator.share) {
+      try {
+        await window.navigator.share(shareData);
+        onClick();
+      } catch (e) {
+        console.warn(e);
+      }
+    } else {
       onOpen();
     }
   };
@@ -43,7 +48,13 @@ export const RWebShare = ({
       {isOpen && (
         <Portal>
           <Backdrop onClose={onClose}>
-            <SocialIcons onClose={onClose} sites={sites} data={shareData} closeText={closeText} />
+            <SocialIcons
+              onClose={onClose}
+              sites={sites}
+              data={shareData}
+              closeText={closeText}
+              onClick={onClick}
+            />
           </Backdrop>
         </Portal>
       )}

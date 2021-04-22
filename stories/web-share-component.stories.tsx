@@ -15,6 +15,7 @@ export const Default = () => (
         url: "https://on.natgeo.com/2zHaNup",
         title: "Flamingos",
       }}
+      onClick={() => console.log("share successful!")}
     >
       <button>Share 🔗</button>
     </RWebShare>

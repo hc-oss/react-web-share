@@ -9,6 +9,7 @@ export interface RWebShareProps {
   closeText?: string;
   data: ShareData;
   sites: string[];
+  onClick?;
 }
 
 export interface SocialIconsProps {
@@ -16,10 +17,12 @@ export interface SocialIconsProps {
   closeText?: string;
   sites: string[];
   data: Required<ShareData>;
+  onClick?;
 }
 
 export interface IconProps {
   onClose;
   name: string;
   data: Required<ShareData>;
+  onClick?;
 }
