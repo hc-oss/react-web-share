@@ -29,7 +29,7 @@ export const RWebShare = ({
   );
 
   const handleOnClick = async () => {
-    if (!window.navigator.share) {
+    if (window.navigator.share) {
       try {
         await window.navigator.share(shareData);
         onClick();
