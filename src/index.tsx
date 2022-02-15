@@ -1,4 +1,4 @@
-import { RWebShareProps } from "interfaces";
+import { RWebShareProps } from "./interfaces";
 import React, { cloneElement, useMemo } from "react";
 
 import Backdrop from "./components/backdrop";
@@ -7,12 +7,14 @@ import Portal from "./components/portal";
 import SocialIcons from "./components/social-icons";
 import useDisclosure from "./hooks/use-disclosure";
 
+const defaultSites = Object.keys(iconList).slice(0, 8);
+
 export const RWebShare = ({
   children,
   closeText,
   data,
   onClick,
-  sites = Object.keys(iconList),
+  sites = defaultSites,
 }: RWebShareProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
 
@@ -27,7 +29,7 @@ export const RWebShare = ({
   );
 
   const handleOnClick = async () => {
-    if (window.navigator.share) {
+    if (!window.navigator.share) {
       try {
         await window.navigator.share(shareData);
         onClick();

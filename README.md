@@ -12,7 +12,7 @@ Tiny [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/
 
 ## ✨ Features
 
-- 🍃 Only ~3kb gzipped and no external dependencies
+- 🍃 Only ~6kb gzipped and no external dependencies
 - 🌀 Uses React Portal
 - ✌ Written w/ TypeScript
 
@@ -61,11 +61,12 @@ export default Example;
 
 ## 👀 Props
 
-| Prop      | Description                 | Type                 | Default                                       |
-| --------- | --------------------------- | -------------------- | --------------------------------------------- |
-| `data`    | Share Object                | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
-| `sites`   | sites                       | `string[]`           | all platforms (see list below for key list)   |
-| `onClick` | callback on sucessful share |                      |                                               |
+| Prop        | Description                 | Type                 | Default                                       |
+| ----------- | --------------------------- | -------------------- | --------------------------------------------- |
+| `data`      | Share Object                | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
+| `sites`     | sites                       | `string[]`           | all platforms (see list below for key list)   |
+| `closeText` | translate close             | `string`             | localise close text                           |
+| `onClick`   | callback on sucessful share |                      |                                               |
 
 ## 🌎 Sites
 
@@ -77,11 +78,8 @@ export default Example;
 - linkedin
 - mail
 - copy (Copy to Clipboard)
-
-## 🤠 Credits
-
-- [TypeScript](https://github.com/microsoft/typescript)
-- [TSDX](https://github.com/jaredpalmer/tsdx)
+- vk
+- okru
 
 ## 📜 License
 

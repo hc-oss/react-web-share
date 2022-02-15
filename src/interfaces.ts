@@ -8,7 +8,7 @@ export interface RWebShareProps {
   children: any;
   closeText?: string;
   data: ShareData;
-  sites: string[];
+  sites?: string[];
   onClick?;
 }
 
