@@ -35,7 +35,6 @@ export const RWebShare = ({
         onClick();
       } catch (e) {
         console.warn(e);
-        onOpen();
       }
     } else {
       onOpen();
