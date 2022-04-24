@@ -1,11 +1,10 @@
-import React, { ReactPortal } from "react";
-import { useEffect } from "react";
+import React from "react";
 import { createPortal } from "react-dom";
 
-const PortalComponent: React.FC = ({ children }): ReactPortal => {
+const PortalComponent: any = ({ children }: any) => {
   const el = document.createElement("div");
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.body.appendChild(el);
     return () => {
       document.body.removeChild(el);
