@@ -1,5 +1,5 @@
 import { RWebShareProps } from "./interfaces";
-import React, { cloneElement, useMemo } from "react";
+import React, { cloneElement, useMemo, useCallback } from "react";
 
 import Backdrop from "./components/backdrop";
 import iconList from "./components/icon/list";
@@ -27,8 +27,8 @@ export const RWebShare = ({
     }),
     [data]
   );
-
-  const handleOnClick = async () => {
+  
+  const handleOnClick = useCallback(async() => {
     if (window.navigator.share) {
       try {
         await window.navigator.share(shareData);
@@ -39,7 +39,7 @@ export const RWebShare = ({
     } else {
       onOpen();
     }
-  };
+  }, [shareData])
 
   return (
     <>
