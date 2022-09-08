@@ -1,7 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 
-const PortalComponent: any = ({ children }: any) => {
+export const Portal: any = ({ children }: any) => {
   const el = document.createElement("div");
 
   React.useEffect(() => {
@@ -13,5 +13,3 @@ const PortalComponent: any = ({ children }: any) => {
 
   return createPortal(children, el);
 };
-
-export default PortalComponent;

@@ -6,7 +6,7 @@ Tiny [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/
 [![NPM](https://img.shields.io/npm/v/react-web-share.svg)](https://npm.im/react-web-share)
 [![gzip](https://badgen.net/bundlephobia/minzip/react-web-share@latest)](https://bundlephobia.com/result?p=react-web-share@latest)
 
-[![Edit react-web-share](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-web-share-46skt?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit react-web-share](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-web-share-46skt)
 
 > 💡 most browsers restricts web share api only to https websites
 
@@ -27,11 +27,11 @@ yarn add react-web-share # yarn
 
 ### Mobile
 
-![Mobile Preview](preview/preview-mobile.jpg)
+![Mobile Preview](https://user-images.githubusercontent.com/5774849/188565874-177a6cc4-0521-4f14-8339-4c31f1476a5d.jpg)
 
 ### Desktop
 
-![Desktop Preview](preview/preview-desktop.jpg)
+![Desktop Preview](https://user-images.githubusercontent.com/5774849/188565984-5782d979-b57b-4b6d-9135-591f77ea8ee7.jpg)
 
 ## 📦 Example
 
@@ -61,12 +61,13 @@ export default Example;
 
 ## 👀 Props
 
-| Prop        | Description                 | Type                 | Default                                       |
-| ----------- | --------------------------- | -------------------- | --------------------------------------------- |
-| `data`      | Share Object                | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
-| `sites`     | sites                       | `string[]`           | all platforms (see list below for key list)   |
-| `closeText` | translate close             | `string`             | localise close text                           |
-| `onClick`   | callback on sucessful share |                      |                                               |
+| Prop            | Description                 | Type                 | Default                                       |
+| --------------- | --------------------------- | -------------------- | --------------------------------------------- |
+| `data`          | Share Object                | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
+| `sites`         | sites                       | `string[]`           | all platforms (see list below for key list)   |
+| `closeText`     | translate close             | `string`             | localise close text                           |
+| `onClick`       | callback on sucessful share |                      |                                               |
+| `disableNative` | disables native share       | `boolean`            | `false`                                       |
 
 ## 🌎 Sites
 

@@ -1,21 +1,10 @@
-import { IconProps } from "interfaces";
-import React, { CSSProperties } from "react";
+import React from "react";
 
-import iconList from "./list";
-
-const SocialIconStyle: CSSProperties = {
-  width: "100%",
-  height: "auto",
-  cursor: "pointer",
-  border: 0,
-  background: "#1A78F6",
-  padding: "0.75rem",
-  borderRadius: "0.5rem",
-  fontSize: 0,
-};
+import { IconProps } from "../../interfaces";
+import { IconList } from "./list";
 
 export default function Icon({ name, data, onClose, onClick }: IconProps) {
-  const { path, viewBox = "0 0 24 24", color, e } = iconList[name];
+  const { path, viewBox = "0 0 24 24", color, e } = IconList[name];
 
   const handleOnButtonClicked = () => {
     onClick && onClick(); // callback
@@ -27,7 +16,8 @@ export default function Icon({ name, data, onClose, onClick }: IconProps) {
     <button
       onClick={handleOnButtonClicked}
       aria-label={name}
-      style={{ ...SocialIconStyle, background: color }}
+      className="rws-icon"
+      style={{ background: color }}
     >
       <svg fill="white" viewBox={viewBox}>
         {path}
