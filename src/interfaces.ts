@@ -10,6 +10,7 @@ export interface RWebShareProps {
   data: ShareData;
   sites?: string[];
   onClick?;
+  disableNative?;
 }
 
 export interface SocialIconsProps {
@@ -25,4 +26,11 @@ export interface IconProps {
   name: string;
   data: Required<ShareData>;
   onClick?;
+}
+
+export interface IconItem {
+  path: JSX.Element;
+  e;
+  color: string;
+  viewBox?: string;
 }
