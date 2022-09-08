@@ -1454,28 +1454,28 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@size-limit/esbuild@8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/esbuild/-/esbuild-8.0.1.tgz#b30f6aa1ee2378fbd6dabd6679548013991f9f40"
-  integrity sha512-EnfRweoQc4P91G45sPfzAWMVPibK5SEV6sUWC46DcGlT9xrYeCQYtInbsny1/lSorC/sfJKN84aGm4A+q6SgOw==
+"@size-limit/esbuild@8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/esbuild/-/esbuild-8.1.0.tgz#0b94d867269d93e39350896c2be4c2c50e996af0"
+  integrity sha512-Lq+vJAUO13RXbiNF4bZOB07LmzMURkbV8Z6dhAkhTdAVWYLUn0zjfIe3O6IMwhj9dqJ0WtadhKHJvNQKG+po3w==
   dependencies:
-    esbuild "^0.15.1"
+    esbuild "^0.15.7"
     nanoid "^3.3.4"
 
-"@size-limit/file@8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-8.0.1.tgz#1b774a3bcc02586e822d8269914de3e8d54a43ed"
-  integrity sha512-kwgc5UJQIz5qbRow3atSiW2K7vEIIw4DelT4WLn09cOwcJgWs82Imgz2UqVivHJmCisn/ltPjT4qmxaDfjFflw==
+"@size-limit/file@8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-8.1.0.tgz#c1624b3c891e4c5f08285b359e85253e1c96bc66"
+  integrity sha512-Ur+NgJSRHBnbQBrD8X2doxXYdBcVJsMxe2KfWrUmnZ6wYz09YKhQ1iYLqNztjf2yf/JEp00zp1vyhmimUQfUHQ==
   dependencies:
     semver "7.3.7"
 
-"@size-limit/preset-small-lib@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-small-lib/-/preset-small-lib-8.0.1.tgz#21611de08f419bc979070770ea035c7cabf7a0fe"
-  integrity sha512-EV+UXGZJU9kiT8R4N9dxjRAJ37tzjuP+e2DfpRtv7cx1ErFiB6k//wEhw9nLmJMWWhfvcVEvJYyKm3+i0pbWUQ==
+"@size-limit/preset-small-lib@^8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-small-lib/-/preset-small-lib-8.1.0.tgz#d0249756da3d7fad27f86383a40c9b5d6f0d29f1"
+  integrity sha512-fs0XD0+rN4SVKGUwae7VMX1uDqK+oUYNGlPe7E0oKhwAH6ek08iH8qiEm0q9IKDrsCfZ9/d/pqNpg9di3p1SVw==
   dependencies:
-    "@size-limit/esbuild" "8.0.1"
-    "@size-limit/file" "8.0.1"
+    "@size-limit/esbuild" "8.1.0"
+    "@size-limit/file" "8.1.0"
 
 "@storybook/addon-actions@6.5.10", "@storybook/addon-actions@^6.5.10":
   version "6.5.10"
@@ -4941,7 +4941,7 @@ esbuild-windows-arm64@0.15.7:
   resolved "https://registry.yarnpkg.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.15.7.tgz#7d5e9e060a7b454cb2f57f84a3f3c23c8f30b7d2"
   integrity sha512-R06nmqBlWjKHddhRJYlqDd3Fabx9LFdKcjoOy08YLimwmsswlFBJV4rXzZCxz/b7ZJXvrZgj8DDv1ewE9+StMw==
 
-esbuild@^0.15.1, esbuild@^0.15.6:
+esbuild@^0.15.1, esbuild@^0.15.6, esbuild@^0.15.7:
   version "0.15.7"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.15.7.tgz#8a1f1aff58671a3199dd24df95314122fc1ddee8"
   integrity sha512-7V8tzllIbAQV1M4QoE52ImKu8hT/NLGlGXkiDsbEU5PS6K8Mn09ZnYoS+dcmHxOS9CRsV4IRAMdT3I67IyUNXw==
@@ -9220,10 +9220,10 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-size-limit@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-8.0.1.tgz#4c89666e93fe38c893e4b03b7d1131ca78108e94"
-  integrity sha512-VHrozqkQTYfcv1OlZIRIL0x6f+xhZ3TT+RTXC5AvKn/yA+3PIWERrKWqHMJPD7G/Vi0SuBtWAn3IvCGx2/UB1g==
+size-limit@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-8.1.0.tgz#75e8368ffd22e1d23ec611fcba2597f913955ed2"
+  integrity sha512-bUL+Uyyt/G+a1XzKlI2WKHVDepmXtqMDhF65pdtjccheiQTNjExWW4nFefgbRL2QgNTzRfK6ayFKjO3o4ER4gg==
   dependencies:
     bytes-iec "^3.1.1"
     chokidar "^3.5.3"
