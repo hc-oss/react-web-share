@@ -7,7 +7,7 @@ export default function Icon({ name, data, onClose, onClick }: IconProps) {
   const { path, viewBox = "0 0 24 24", color, e } = IconList[name];
 
   const handleOnButtonClicked = () => {
-    onClick && onClick(); // callback
+    onClick && onClick(name); // callback
     e(encodeURIComponent(data.url), data.text, data.title);
     onClose();
   };
