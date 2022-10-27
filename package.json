@@ -16,9 +16,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {
-    "eslint-plugin-simple-import-sort": "^8.0.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
     "react-dom": "^16 || ^17 || ^18"
@@ -30,18 +28,19 @@
     "@storybook/addon-knobs": "^6.4.0",
     "@storybook/addon-links": "^6.5.12",
     "@storybook/react": "^6.5.12",
-    "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@types/react": "^18.0.21",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
-    "eslint": "8.25.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-storybook": "^0.6.6",
+    "eslint": "8.25.0",
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
-    "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react": "^18.2.0",
     "size-limit": "^8.1.0",
     "storybook-addon-turbo-build": "^1.1.0",
     "tsup": "^6.2.3",
