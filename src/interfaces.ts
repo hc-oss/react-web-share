@@ -11,6 +11,7 @@ export interface RWebShareProps {
   sites?: string[];
   onClick?;
   disableNative?;
+  styledComp?: JSX.Element;
 }
 
 export interface SocialIconsProps {
