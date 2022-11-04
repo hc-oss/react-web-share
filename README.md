@@ -49,6 +49,7 @@ const Example = () => {
           title: "Flamingos",
         }}
         onClick={() => console.log("shared successfully!")}
+        styledComp={<Component />}
       >
         <button>Share 🔗</button>
       </RWebShare>
@@ -68,6 +69,7 @@ export default Example;
 | `closeText`     | translate close             | `string`             | localise close text                           |
 | `onClick`       | callback on sucessful share |                      |                                               |
 | `disableNative` | disables native share       | `boolean`            | `false`                                       |
+| `styledComp`    | style share component   | `react element`
 
 ## 🌎 Sites
 

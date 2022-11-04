@@ -4,6 +4,7 @@ import React, { cloneElement, memo, useCallback, useMemo } from "react";
 
 import { Backdrop } from "./components/backdrop";
 import { IconList } from "./components/icon/list";
+import Icon from "./components/icon";
 import { Portal } from "./components/portal";
 import { SocialIcons } from "./components/social-icons";
 import { useDisclosure } from "./hooks/use-disclosure";
@@ -13,6 +14,7 @@ const defaultSites = Object.keys(IconList).slice(0, 8);
 
 export const RWebShare = memo((props: RWebShareProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
+  const { styledComp, children, ...rest } = props;
 
   const shareData = useMemo(
     () => ({
@@ -40,16 +42,9 @@ export const RWebShare = memo((props: RWebShareProps) => {
     }
   }, [shareData]);
 
-  return (
-    <>
-      {/* Overrides Children element's `onClick` event */}
-      {cloneElement(props.children, {
-        ...props.children?.props,
-        onClick: handleOnClick,
-      })}
-
-      {/* Share Component */}
-      {isOpen && (
+  const renderShareComponent = useCallback(() => {
+    if (!styledComp)
+      return (
         <Portal>
           <Backdrop onClose={onClose}>
             <SocialIcons
@@ -61,7 +56,24 @@ export const RWebShare = memo((props: RWebShareProps) => {
             />
           </Backdrop>
         </Portal>
-      )}
+      );
+    return cloneElement(styledComp, {
+      ...rest,
+      sites: props.sites || defaultSites,
+      Icon,
+    });
+  }, [styledComp]);
+
+  return (
+    <>
+      {/* Overrides Children element's `onClick` event */}
+      {cloneElement(props.children, {
+        ...props.children?.props,
+        onClick: handleOnClick,
+      })}
+
+      {/* Share Component */}
+      {isOpen && renderShareComponent()}
     </>
   );
 });
