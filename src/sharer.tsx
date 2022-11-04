@@ -38,7 +38,8 @@ export const RWebShare = memo((props: RWebShareProps) => {
         console.warn(e);
       }
     } else {
-      onOpen();
+      await onOpen();
+      props.onClick();
     }
   }, [shareData]);
 
