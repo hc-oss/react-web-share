@@ -36,7 +36,7 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-storybook": "^0.6.6",
-    "eslint": "8.25.0",
+    "eslint": "8.33.0",
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
     "react-dom": "^18.2.0",
