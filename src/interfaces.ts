@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export interface ShareData {
   text?: string;
   title?: string;
@@ -5,32 +7,44 @@ export interface ShareData {
 }
 
 export interface RWebShareProps {
-  children: any;
+  children: ReactElement;
   closeText?: string;
   data: ShareData;
-  sites?: string[];
-  onClick?;
-  disableNative?;
+  sites?: Site[];
+  onClick?: () => void;
+  disableNative?: boolean;
 }
 
 export interface SocialIconsProps {
-  onClose;
+  onClose: IconProps["onClose"];
   closeText?: string;
-  sites: string[];
+  sites: Site[];
   data: Required<ShareData>;
-  onClick?;
+  onClick?: IconProps["onClick"];
 }
 
 export interface IconProps {
-  onClose;
-  name: string;
+  onClose: () => void;
+  name: Site;
   data: Required<ShareData>;
-  onClick?;
+  onClick?: (name: Site) => void;
 }
 
 export interface IconItem {
   path: JSX.Element;
-  e;
+  e: (url: string, text: string, title: string) => void;
   color: string;
   viewBox?: string;
 }
+
+export type Site =
+  | "facebook"
+  | "twitter"
+  | "whatsapp"
+  | "reddit"
+  | "telegram"
+  | "linkedin"
+  | "mail"
+  | "copy"
+  | "vk"
+  | "okru";

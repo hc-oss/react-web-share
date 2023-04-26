@@ -1,10 +1,8 @@
 import React from "react";
 
-import { IconItem } from "../../interfaces";
+import { IconItem, Site } from "../../interfaces";
 
-export interface IconListObject {
-  [key: string]: IconItem;
-}
+export type IconListObject = Record<Site, IconItem>;
 
 const externalOpen = (URL) => window.open(URL, "_blank", "noopener");
 

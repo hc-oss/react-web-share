@@ -61,13 +61,13 @@ export default Example;
 
 ## 👀 Props
 
-| Prop            | Description                 | Type                 | Default                                       |
-| --------------- | --------------------------- | -------------------- | --------------------------------------------- |
-| `data`          | Share Object                | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
-| `sites`         | sites                       | `string[]`           | all platforms (see list below for key list)   |
-| `closeText`     | translate close             | `string`             | localise close text                           |
-| `onClick`       | callback on sucessful share |                      |                                               |
-| `disableNative` | disables native share       | `boolean`            | `false`                                       |
+| Prop            | Description                  | Type                 | Default                                       |
+| --------------- | ---------------------------- | -------------------- | --------------------------------------------- |
+| `data`          | Share Object                 | `{text, url, title}` | `{text: "", url: currentURL, title: "Share"}` |
+| `sites`         | sites                        | `string[]`           | all platforms (see list below for key list)   |
+| `closeText`     | translate close              | `string`             | localise close text                           |
+| `onClick`       | callback on successful share | `() => void`         |                                               |
+| `disableNative` | disables native share        | `boolean`            | `false`                                       |
 
 ## 🌎 Sites
 
