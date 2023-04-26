@@ -7,9 +7,9 @@ import { IconList } from "./components/icon/list";
 import { Portal } from "./components/portal";
 import { SocialIcons } from "./components/social-icons";
 import { useDisclosure } from "./hooks/use-disclosure";
-import type { RWebShareProps } from "./interfaces";
+import type { RWebShareProps, Site } from "./interfaces";
 
-const defaultSites = Object.keys(IconList).slice(0, 8);
+const defaultSites = Object.keys(IconList).slice(0, 8) as Site[];
 
 export const RWebShare = memo((props: RWebShareProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
@@ -31,7 +31,7 @@ export const RWebShare = memo((props: RWebShareProps) => {
     if (window.navigator.share && !props.disableNative) {
       try {
         await window.navigator.share(shareData);
-        props.onClick();
+        props.onClick?.();
       } catch (e) {
         console.warn(e);
       }
