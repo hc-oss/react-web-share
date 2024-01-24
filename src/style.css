@@ -28,7 +28,8 @@
   }
 }
 
-.rws-icons {
+.rws-icons,
+.rws-icons-scroll {
   padding: 1.25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -40,7 +41,6 @@
   height: auto;
   cursor: pointer;
   border: 0;
-  background: #1a78f6;
   padding: 0.75rem;
   border-radius: 0.5rem;
   font-size: 0;
@@ -48,11 +48,12 @@
 
 .rws-container {
   max-width: 24rem;
-  width: 90%;
-  background-color: white;
+  width: 100%;
+  background-color: #000000;
   border-radius: 0.5rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  position: fixed;
+  top: 33%;
+  transform: translate(-50%, -50%);
 }
 
 .rws-backdrop {
@@ -61,7 +62,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,14 +75,56 @@
   font-size: 1.25rem;
   font-weight: 600;
   padding-bottom: 0;
+  color: #fff;
 }
 
 .rws-close {
-  background: #edf2f7;
+  background: #ffff;
   cursor: pointer;
   padding: 0.75rem;
   display: block;
   width: 100%;
   border: 0;
   font-size: 1rem;
+  border-radius: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rws-close:hover {
+  background: #f2f2f2;
+}
+
+@media (max-width: 640px) {
+  .rws-container {
+    bottom: 0;
+    top: auto;
+    max-width: 100%;
+  }
+
+  .rws-close {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .rws-icons-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 1rem;
+  }
+
+  .rws-icons-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rws-icons-scroll > .rws-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .rws-icon svg {
+    width: 35px;
+    height: 35px;
+  }
 }

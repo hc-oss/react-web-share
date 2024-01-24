@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 
 import React, { cloneElement, memo, useCallback, useMemo } from "react";
@@ -58,6 +60,8 @@ export const RWebShare = memo((props: RWebShareProps) => {
               data={shareData}
               closeText={props.closeText}
               onClick={props.onClick}
+              dark={props.dark}
+              scrollable={props.scrollable}
             />
           </Backdrop>
         </Portal>

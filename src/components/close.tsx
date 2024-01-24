@@ -2,7 +2,7 @@ import React from "react";
 
 interface CloseButtonProps {
   onClose;
-  closeText?: string;
+  closeText?: string | JSX.Element;
 }
 
 export function CloseButton({ onClose, closeText }: CloseButtonProps) {

@@ -6,19 +6,23 @@ export interface ShareData {
 
 export interface RWebShareProps {
   children: any;
-  closeText?: string;
+  closeText?: string | JSX.Element;
   data: ShareData;
   sites?: string[];
   onClick?;
   disableNative?;
+  dark?: boolean;
+  scrollable?: boolean;
 }
 
 export interface SocialIconsProps {
   onClose;
-  closeText?: string;
+  closeText?: string | JSX.Element;
   sites: string[];
   data: Required<ShareData>;
   onClick?;
+  dark?: boolean;
+  scrollable?: boolean;
 }
 
 export interface IconProps {
@@ -26,6 +30,7 @@ export interface IconProps {
   name: string;
   data: Required<ShareData>;
   onClick?;
+  dark?: boolean;
 }
 
 export interface IconItem {
