@@ -3,7 +3,13 @@ import React from "react";
 import { IconProps } from "../../interfaces";
 import { IconList } from "./list";
 
-export default function Icon({ name, data, onClose, onClick }: IconProps) {
+export default function Icon({
+  name,
+  data,
+  onClose,
+  onClick,
+  dark = false,
+}: IconProps) {
   const { path, viewBox = "0 0 24 24", color, e } = IconList[name];
 
   const handleOnButtonClicked = () => {
@@ -17,9 +23,9 @@ export default function Icon({ name, data, onClose, onClick }: IconProps) {
       onClick={handleOnButtonClicked}
       aria-label={name}
       className="rws-icon"
-      style={{ background: color }}
+      style={{ background: dark ? "#FFFFFF" : color }}
     >
-      <svg fill="white" viewBox={viewBox}>
+      <svg fill={`${dark ? "#000000" : "white"}`} viewBox={viewBox}>
         {path}
       </svg>
     </button>

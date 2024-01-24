@@ -11,6 +11,8 @@ export const SocialIcons = ({
   data,
   closeText,
   onClick,
+  dark,
+  scrollable = false,
 }: SocialIconsProps) => (
   <section
     role="dialog"
@@ -18,7 +20,7 @@ export const SocialIcons = ({
     className="rws-container web-share-fade-in-up"
   >
     <Header title={data.title} />
-    <div className="rws-icons">
+    <div className={`${scrollable ? "rws-icons-scroll" : "rws-icons"}`}>
       {sites.map((name) => (
         <Icon
           name={name}
@@ -26,6 +28,7 @@ export const SocialIcons = ({
           data={data}
           onClose={onClose}
           onClick={onClick}
+          dark={dark}
         />
       ))}
     </div>
